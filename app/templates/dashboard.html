@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h2 class="mb-4">👋 Bienvenue, {{ user.nom }} !</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title">📧 Email</h5>
+                    <p class="card-text">{{ user.email }}</p>
+                    <hr>
+                    <h5 class="card-title">🪙 Jetons disponibles</h5>
+                    <p class="card-text display-6">{{ user.jetons }}</p>
+                    <a href="/encheres" class="btn btn-outline-primary mt-3">Voir les enchères ➜</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

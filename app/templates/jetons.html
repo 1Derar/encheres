@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-center mb-4">🪙 Acheter des jetons</h2>
+<div class="row justify-content-center">
+    <div class="col-md-10 d-flex justify-content-center gap-4 flex-wrap">
+
+        <a href="/paiement/10" class="card shadow text-center p-4 text-decoration-none text-dark" style="width: 12rem;">
+            <div class="card-body">
+                <h5 class="card-title">💰 Pack 10</h5>
+                <p class="card-text">10 jetons</p>
+                <p class="text-muted">2€</p>
+            </div>
+        </a>
+
+        <a href="/paiement/25" class="card shadow text-center p-4 text-decoration-none text-dark" style="width: 12rem;">
+            <div class="card-body">
+                <h5 class="card-title">💼 Pack 25</h5>
+                <p class="card-text">25 jetons</p>
+                <p class="text-muted">4€</p>
+            </div>
+        </a>
+
+        <a href="/paiement/50" class="card shadow text-center p-4 text-decoration-none text-dark" style="width: 12rem;">
+            <div class="card-body">
+                <h5 class="card-title">👑 Pack 50</h5>
+                <p class="card-text">50 jetons</p>
+                <p class="text-muted">7€</p>
+            </div>
+        </a>
+
+    </div>
+</div>
+{% endblock %}

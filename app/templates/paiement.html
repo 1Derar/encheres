@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-center">💳 Paiement</h2>
+<div class="card shadow mx-auto text-center" style="max-width: 400px;">
+    <div class="card-body">
+        <h4 class="card-title">Confirmer votre achat</h4>
+        <p class="card-text">Vous allez acheter <strong>{{ montant }} jetons</strong>.</p>
+        <form method="post">
+            <button class="btn btn-success">✅ Valider le paiement (fictif)</button>
+        </form>
+        <a href="/jetons" class="btn btn-link mt-3">Annuler</a>
+    </div>
+</div>
+{% endblock %}

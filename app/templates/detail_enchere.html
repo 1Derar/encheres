@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ enchere.produit.nom }}</h2>
+<p>{{ enchere.produit.description }}</p>
+<p>⏰ Fin de l'enchère : {{ enchere.date_fin.strftime('%d/%m/%Y %H:%M') }}</p>
+
+<form method="post">
+  <div class="mb-3">
+    <label>Votre mise (en euros):</label>
+    <input type="number" step="0.01" name="montant" class="form-control" required>
+  </div>
+  <button class="btn btn-primary">Miser (🪙 {{ enchere.jetons_par_mise }} jetons)</button>
+</form>
+
+<h4 class="mt-4">Offres en cours :</h4>
+<ul class="list-group">
+  {% for offre in offres %}
+  <li class="list-group-item">{{ offre.utilisateur.nom }} : {{ offre.montant }} €</li>
+  {% endfor %}
+</ul>
+{% endblock %}
